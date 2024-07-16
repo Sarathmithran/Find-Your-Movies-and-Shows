@@ -1,4 +1,4 @@
-export const baseURL = 'http://www.omdbapi.com';
+export const baseURL = 'https://www.omdbapi.com';
 
 export const APIKey = 'ea03b6a8';
 
