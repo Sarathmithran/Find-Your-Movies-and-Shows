@@ -9,9 +9,9 @@ import ClearIcon from '@mui/icons-material/Clear';
 import { MovieServices } from '@/app/services/movieServices';
 import SearchResult from '../searchResult/SearchResult';
 import { MovieDataType } from '@/app/services/classes';
-import { Container, Stack, Typography } from '@mui/material';
+import { Box, Container, Stack, Typography } from '@mui/material';
 
-export default function CustomizedInputBase() {
+export default function TextBox() {
   const [inputValue, setInputValue] = React.useState('');
   const [message, setMessage] = React.useState('');
   const [loading, setLoading] = React.useState(false);
@@ -38,7 +38,6 @@ export default function CustomizedInputBase() {
     }
   };
   
-
   const handleClear = () => {
     setInputValue('');
     setMessage('')
@@ -48,6 +47,11 @@ export default function CustomizedInputBase() {
   return (
     <Stack component={'div'}>
       <Stack component={'div'} direction={'row'} sx={{display:'flex',justifyContent:'center',pb:'30px',pt:'50px'}}>
+      <Box component={'div'} sx={{ display: 'flex', alignItems: 'center', mr: 2 }}>
+          <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+            Find your favourites :
+          </Typography>
+        </Box>
         <Paper
           component="form"
           sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
@@ -55,7 +59,7 @@ export default function CustomizedInputBase() {
         >
           <InputBase
             sx={{ ml: 1, flex: 1 }}
-            placeholder="Search your favourite movies & shows.."
+            placeholder="Search your favourite movies & series.."
             inputProps={{ 'aria-label': 'search movies' }}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
