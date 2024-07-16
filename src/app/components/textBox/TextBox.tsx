@@ -60,16 +60,20 @@ export default function CustomizedInputBase() {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
-          <IconButton sx={{ p: '10px' }} aria-label="clear" onClick={handleClear}>
-            <ClearIcon />
-          </IconButton>
+          {
+            inputValue && (
+            <IconButton sx={{ p: '10px' }} aria-label="clear" onClick={handleClear}>
+              <ClearIcon />
+            </IconButton>
+            )
+          }
           <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
           <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
             <SearchIcon />
           </IconButton>
         </Paper>
       </Stack>
-      <Container component={'div'} sx={{minHeight:'100vh'}}>
+      <Container component={'div'} sx={{minHeight:'35vh'}}>
       {message && <Typography variant="body1" sx={{ textAlign:'center',mt: 1,mb:2 }}>{message}</Typography>}
         <SearchResult movies={movies} loading={loading}/>
       </Container>
