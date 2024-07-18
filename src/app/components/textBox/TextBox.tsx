@@ -10,6 +10,7 @@ import { MovieServices } from '@/app/services/movieServices';
 import SearchResult from '../searchResult/SearchResult';
 import { MovieDataType } from '@/app/services/classes';
 import { Box, Container, Stack, Typography } from '@mui/material';
+import './TextBox.css';
 
 export default function TextBox() {
   const [inputValue, setInputValue] = React.useState('');
@@ -47,8 +48,8 @@ export default function TextBox() {
   return (
     <Stack component={'div'}>
       <Stack component={'div'} direction={'row'} sx={{display:'flex',justifyContent:'center',pb:'30px',pt:'50px'}}>
-      <Box component={'div'} sx={{ display: 'flex', alignItems: 'center', mr: 2 }}>
-          <Typography variant="h6" sx={{ fontWeight: 'bold',color:'white' }}>
+        <Box component={'div'} sx={{ display: 'flex', alignItems: 'center', mr: 2 }}>
+          <Typography variant="body1" className='textBox-label'>
             Find your favourites :
           </Typography>
         </Box>
