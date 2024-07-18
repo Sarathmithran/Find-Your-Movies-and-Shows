@@ -48,7 +48,7 @@ export default function TextBox() {
     <Stack component={'div'}>
       <Stack component={'div'} direction={'row'} sx={{display:'flex',justifyContent:'center',pb:'30px',pt:'50px'}}>
       <Box component={'div'} sx={{ display: 'flex', alignItems: 'center', mr: 2 }}>
-          <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+          <Typography variant="h6" sx={{ fontWeight: 'bold',color:'white' }}>
             Find your favourites :
           </Typography>
         </Box>
