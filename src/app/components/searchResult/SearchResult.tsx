@@ -2,7 +2,6 @@ import React from 'react';
 import { MovieDataType } from '@/app/services/classes';
 import { Grid, Card, CardActions, CardContent, CardMedia, Button, Typography, CircularProgress } from '@mui/material';
 import './SearchResult.css';
-import { MovieServices } from '@/app/services/movieServices';
 interface SearchResultProps {
   movies: MovieDataType[];
   loading: boolean;

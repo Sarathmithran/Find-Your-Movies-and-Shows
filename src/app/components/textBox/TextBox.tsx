@@ -77,8 +77,8 @@ export default function TextBox() {
           </IconButton>
         </Paper>
       </Stack>
-      <Container component={'div'} sx={{minHeight:'35vh'}}>
-      {message && <Typography variant="body1" sx={{ textAlign:'center',mt: 1,mb:2 }}>{message}</Typography>}
+      <Container component={'div'} sx={{minHeight:'30vh'}}>
+      {message && <Typography variant="body1" sx={{ textAlign:'center',mt: 6,mb:2 }}>{message}</Typography>}
         <SearchResult movies={movies} loading={loading}/>
       </Container>
     </Stack>
