@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <Stack component={'div'} className='header-sec'>
       <Container sx={{justifyContent:'center'}}>
-          <Image src={'/logo.png'} height={100} width={100} alt='logo'/>
+          <Image src={'/logo.webp'} height={100} width={100} alt='logo'/>
       </Container>
     </Stack>
   )
